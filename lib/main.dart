@@ -1,3 +1,4 @@
+import 'package:e_commerce_admin_panel/views/orders/orders_view.dart';
 import 'package:e_commerce_admin_panel/views/products/new_product_view.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
@@ -32,6 +33,10 @@ class MyApp extends StatelessWidget {
         GetPage(
           name: '/products/new',
           page: () => NewProductView(),
+        ),
+        GetPage(
+          name: '/orders',
+          page: () => OrdersView(),
         ),
       ],
     );

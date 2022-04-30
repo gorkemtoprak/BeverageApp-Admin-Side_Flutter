@@ -97,4 +97,33 @@ class ProductModel extends Equatable {
 
   @override
   bool get stringify => true;
+
+  static List<ProductModel> products = [
+    ProductModel(
+      id: '1',
+      name: 'Soft Drink #1',
+      description:
+          'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+      category: 'Soft Drinks',
+      imageUrl:
+          'https://images.unsplash.com/photo-1598614187854-26a60e982dc4?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80', //https://unsplash.com/photos/dO9A6mhSZZY
+      price: 4.99,
+      quantity: 10,
+      isRecommended: true,
+      isPopular: false,
+    ),
+    ProductModel(
+      id: '2',
+      name: 'Soft Drink #2',
+      description:
+          'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+      category: 'Soft Drinks',
+      imageUrl:
+          'https://images.unsplash.com/photo-1610873167013-2dd675d30ef4?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=488&q=80', //https://unsplash.com/photos/Viy_8zHEznk
+      price: 2.99,
+      quantity: 10,
+      isRecommended: false,
+      isPopular: true,
+    ),
+  ];
 }

@@ -6,6 +6,7 @@ import 'package:get/get.dart';
 
 import '../../controller/product_controller.dart';
 import '../../models/product_model.dart';
+import '../../shared/custom_app_bar.dart';
 
 class NewProductView extends StatelessWidget {
   NewProductView({Key? key}) : super(key: key);
@@ -15,19 +16,14 @@ class NewProductView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        backgroundColor: Colors.black,
-        elevation: 0,
-        automaticallyImplyLeading: false,
-        title: Text(
-          'Add New Products',
-          style: Theme.of(context)
-              .textTheme
-              .headline5!
-              .copyWith(color: Colors.white),
+      appBar: const PreferredSize(
+        preferredSize: Size.fromHeight(60.0),
+        child: CustomAppBar(
+          title: 'Add New Products',
+          isLeading: true,
         ),
       ),
-      backgroundColor: Colors.white,
+      backgroundColor: Colors.grey[200],
       body: Padding(
         padding: const EdgeInsets.only(
           left: 16,
@@ -149,7 +145,7 @@ class NewProductView extends StatelessWidget {
                         category: productController.newProduct['category'],
                         description:
                             productController.newProduct['description'],
-                        imageUrl: '',
+                        imageUrl: productController.newProduct['imageUrl'],
                         isRecommended:
                             productController.newProduct['isRecommended'] ??
                                 false,

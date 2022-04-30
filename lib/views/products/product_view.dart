@@ -1,10 +1,10 @@
-import 'package:e_commerce_admin_panel/models/product_model.dart';
 import 'package:e_commerce_admin_panel/views/products/new_product_view.dart';
 import 'package:e_commerce_admin_panel/views/products/widgets/product_card_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 import '../../controller/product_controller.dart';
+import '../../shared/custom_app_bar.dart';
 
 class ProductView extends StatelessWidget {
   ProductView({Key? key}) : super(key: key);
@@ -14,19 +14,14 @@ class ProductView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        backgroundColor: Colors.black,
-        elevation: 0,
-        // automaticallyImplyLeading: false,
-        title: Text(
-          'Products',
-          style: Theme.of(context)
-              .textTheme
-              .headline5!
-              .copyWith(color: Colors.white),
+      appBar: const PreferredSize(
+        preferredSize: Size.fromHeight(60.0),
+        child: CustomAppBar(
+          title: 'Products',
+          isLeading: true,
         ),
       ),
-      backgroundColor: Colors.white,
+      backgroundColor: Colors.grey[200],
       floatingActionButton: FloatingActionButton(
         onPressed: () {
           Get.to(() => NewProductView());

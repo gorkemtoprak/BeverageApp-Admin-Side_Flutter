@@ -1,3 +1,5 @@
+// ignore_for_file: avoid_print
+
 import 'package:e_commerce_admin_panel/models/product_model.dart';
 import 'package:e_commerce_admin_panel/services/firebase_service.dart';
 import 'package:e_commerce_admin_panel/services/image_service.dart';
@@ -55,7 +57,7 @@ class ProductController extends GetxController {
       if (image == null) {
         ScaffoldMessenger.of(context).showSnackBar(
           const SnackBar(
-            content: Text('Nothing is selected'),
+            content: Text('Nothing selected :('),
           ),
         );
       }
